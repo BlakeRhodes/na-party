@@ -1,5 +1,6 @@
-<!-- character-view.component.html -->
-<div class="m-2" [ngSwitch]="character.type">
+<button class="m-1" (click)="isExpanded = !isExpanded">{{isExpanded ? 'Hide' : 'Show'}}</button>
+
+<div class="m-2" *ngIf="isExpanded" [ngSwitch]="character.type">
   <ng-container *ngSwitchCase="FIGHTER">
     <!-- Code to display when character type is Fighter -->
     <ul>

@@ -86,7 +86,7 @@ export const fighterSkills: Map<string, Pair<(arg: Character)=>Character, (arg: 
     ["E-Shield", {first:addTwo, second:removeTwo}],
     ["Aetherblade", {first:addTwo, second:removeTwo}],
     ["Spire Lance", {first:addTwo, second:removeTwo}],
-    ["Pneumatic Clawed Gauntlets", {first:addTwo, second:removeTwo}],
+    ["P. C. Gauntlets", {first:addTwo, second:removeTwo}],
     ["Lead Belcher",{first:addThree, second:removeThree}],
     ["Heavy Armor", {first:addFive, second: removeFive}],
     ["Battle Cry",{first:addOne, second: removeOne}],

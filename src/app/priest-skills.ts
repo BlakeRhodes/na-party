@@ -21,5 +21,5 @@ export const priestSkills: Map<string, Pair<(arg: Character) => Character, (arg:
     ["Preacher", {first: addOne, second: removeOne}],
     ["The Will of Linus", {first: addThree, second: removeThree}],
     ["Elevate Privileges", {first: addFive, second: removeFive}],
-    ["Oh Fair Algorithmia! Oh Shining Cloud!", {first: addTwo, second: removeTwo}],
+    ["Oh Fair Algorithmia!", {first: addTwo, second: removeTwo}],
   ])

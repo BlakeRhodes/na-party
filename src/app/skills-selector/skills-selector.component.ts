@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Character, createCharacter, Type} from "../character";
-import {NgForOf, NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common";
+import {NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common";
 import {fighterSkills} from "../fighter-skills";
 import {FormsModule} from "@angular/forms";
 import {StateService} from "../state.service";
@@ -16,7 +16,8 @@ import {scoutSkills} from "../scout-skills";
     NgSwitchCase,
     FormsModule,
     NgForOf,
-    NgSwitchDefault
+    NgSwitchDefault,
+    NgIf
   ],
   templateUrl: './skills-selector.component.html',
   styleUrl: './skills-selector.component.css'
@@ -44,6 +45,7 @@ export class SkillsSelectorComponent {
   scoutSkills = scoutSkills;
   scoutSkillNames: string[] = [];
   scoutChosen: boolean[] = [];
+  isExpanded: boolean = false;
 
   constructor(private state: StateService) {
     this.fighterSkills.forEach((value, key) => {
