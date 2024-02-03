@@ -1,0 +1,12 @@
+<button
+  class="bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 m-1 rounded"
+  (click)="addCharacter()"
+  [disabled]="charactersArray.length >= 6"
+>
+  Add Character
+</button>
+<div class="characters-container flex flex-row flex-wrap">
+  <div *ngFor="let character of charactersArray">
+    <app-character-view></app-character-view>
+  </div>
+</div>
