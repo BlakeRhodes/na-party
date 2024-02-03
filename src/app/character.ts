@@ -14,6 +14,7 @@ export interface Character {
   lp: number;
   rp: number;
   pp: number;
+  skills: string[]
 }
 
 export const fighter: Character = {
@@ -24,7 +25,8 @@ export const fighter: Character = {
   wp: 0,
   lp: 1,
   rp: 0,
-  pp: 0
+  pp: 0,
+  skills: []
 }
 
 export const hunter: Character = {
@@ -35,7 +37,8 @@ export const hunter: Character = {
   wp: 1,
   lp: 1,
   rp: 2,
-  pp: 0
+  pp: 0,
+  skills: []
 }
 
 export const priest: Character = {
@@ -46,7 +49,8 @@ export const priest: Character = {
   wp: 3,
   lp: 1,
   rp: 1,
-  pp: 0
+  pp: 0,
+  skills: []
 }
 
 export const scout: Character = {
@@ -57,7 +61,8 @@ export const scout: Character = {
   wp: 0,
   lp: 1,
   rp: 1,
-  pp: 0
+  pp: 0,
+  skills: []
 }
 
 export function createCharacter(type: Type): Character {

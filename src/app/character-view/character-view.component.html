@@ -1,7 +1,15 @@
 <!-- character-view.component.html -->
-<div class="max-w-sm rounded overflow-hidden shadow-lg mx-auto">
+<div class="bg-gray-600 max-w-sm rounded overflow-hidden shadow-lg mx-auto m-4">
   <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">{{ displayType() }}</div>
+    <div class="font-bold text-xl mb-2 flex flex-row">
+      {{ displayType() }}
+      <button
+        class="text-white h-1 text-xs rounded ml-1 p-1"
+        (click)="deleteCharacter()"
+      >
+        X
+      </button>
+    </div>
     <hr/>
     <p class="my-2"><strong>CM:</strong> {{ character.cm }}</p>
     <p class="my-2"><strong>HP:</strong> {{ character.hp }}</p>
@@ -9,12 +17,6 @@
     <p class="my-2"><strong>WP:</strong> {{ character.wp }}</p>
     <p class="my-2"><strong>LP:</strong> {{ character.lp }}</p>
     <p class="my-2"><strong>RP:</strong> {{ character.rp }}</p>
-    <p class="my-2"><strong>PP:</strong> {{ character.pp }}</p>
   </div>
-
-  <div class="px-6 pt-4 pb-2 flex flex-col">
-  <span class="inline-block px-3 py-1 text-sm font-semibold text-blue-700 mr-2" *ngFor="let option of getOptions()">
-    <input type="checkbox" class="mr-2" (change)="changeCharacter(character)">{{ option }}
-  </span>
-  </div>
+  <app-skills-selector [type]="character.type"></app-skills-selector>
 </div>

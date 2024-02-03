@@ -2,34 +2,30 @@
   <div class="table-responsive">
     <table class="table-auto w-full">
       <thead>
-      <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-        <th class="py-3 px-6 text-left">CM</th>
-        <th class="py-3 px-6 text-left">HP</th>
-        <th class="py-3 px-6 text-left">SP</th>
-        <th class="py-3 px-6 text-left">WP</th>
-        <th class="py-3 px-6 text-left">LP</th>
-        <th class="py-3 px-6 text-left">RP</th>
+      <tr class="bg-gray-600 text-gray-200 uppercase text-sm leading-normal">
+        <th class="py-3 px-6 text-center">CM</th>
+        <th class="py-3 px-6 text-center">SP</th>
+        <th class="py-3 px-6 text-center">WP</th>
+        <th class="py-3 px-6 text-center">LP</th>
+        <th class="py-3 px-6 text-center">RP</th>
       </tr>
       </thead>
       <tbody class="text-gray-200 text-sm font-light">
       <tr class="border-b border-gray-200">
-        <td class="py-3 px-6 text-left whitespace-nowrap">
-          <!-- Data for CM -->1
+        <td class="py-3 px-6 text-center whitespace-nowrap">
+          {{ currentCM }}
         </td>
         <td class="py-3 px-6 text-center">
-          <!-- Data for HP -->1
+          {{ currentSP }}
         </td>
         <td class="py-3 px-6 text-center">
-          <!-- Data for SP -->1
+          {{ currentWP }}
         </td>
         <td class="py-3 px-6 text-center">
-          <!-- Data for WP -->1
+          {{ currentLP }}
         </td>
         <td class="py-3 px-6 text-center">
-          <!-- Data for LP -->1
-        </td>
-        <td class="py-3 px-6 text-center">
-          <!-- Data for RP -->1
+          {{ currentRP }}
         </td>
       </tr>
       </tbody>

@@ -1,0 +1,27 @@
+<!-- character-view.component.html -->
+<div class="m-2" [ngSwitch]="type">
+  <ng-container *ngSwitchCase="FIGHTER">
+    <!-- Code to display when character type is Fighter -->
+    <p>This is a Fighter</p>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="HUNTER">
+    <!-- Code to display when character type is Hunter -->
+    <p>This is a Hunter</p>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="PRIEST">
+    <!-- Code to display when character type is Priest -->
+    <p>This is a Priest</p>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="SCOUT">
+    <!-- Code to display when character type is Scout -->
+    <p>This is a Scout</p>
+  </ng-container>
+
+  <ng-container *ngSwitchDefault>
+    <!-- Code to display when character type is none of the previous categories -->
+    <p>Type is not specified or is unknown</p>
+  </ng-container>
+</div>

@@ -1,12 +1,24 @@
-<button
-  class="bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 m-1 rounded"
-  (click)="addCharacter()"
-  [disabled]="charactersArray.length >= 6"
->
-  Add Character
-</button>
-<div class="characters-container flex flex-row flex-wrap">
-  <div *ngFor="let character of charactersArray">
-    <app-character-view></app-character-view>
+<div class="flex flex-row">
+  <select
+    class="block appearance-none bg-white border border-gray-200 text-gray-700 m-2 px-3 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+    [(ngModel)]="selectedType"
+  >
+    <option value="">Choose a Type...</option>
+    <option value="Fighter">Fighter</option>
+    <option value="Hunter">Hunter</option>
+    <option value="Priest">Priest</option>
+    <option value="Scout">Scout</option>
+  </select>
+  <button
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold pt-0.5 px-3 m-2 rounded"
+    (click)="addCharacter()"
+    [disabled]="charactersArray.length >= 6"
+  >
+    Add Character
+  </button>
+</div>
+<div class="characters-container flex flex-row flex-wrap m-2">
+  <div class="m-2" *ngFor="let character of charactersArray">
+    <app-character-view [character]="character"></app-character-view>
   </div>
 </div>
