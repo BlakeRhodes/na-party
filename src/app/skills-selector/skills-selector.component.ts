@@ -109,7 +109,7 @@ export class SkillsSelectorComponent {
     console.log(skill, this.scoutChosen[i], $event, this.character)
     const skillPair = this.scoutSkills.get(skill);
     if (skillPair) {
-      if(this.priestChosen[i]){
+      if(this.scoutChosen[i]){
         this.character = skillPair.first(this.character);
       } else {
         this.character = skillPair.second(this.character);
