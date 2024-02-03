@@ -1,7 +1,7 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {StatsComponent} from "../../stats/stats.component";
+import {Component, effect} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {NgIf} from "@angular/common";
+import {StateService} from "../state.service";
 
 @Component({
   selector: 'app-party-header',
@@ -19,7 +19,15 @@ export class PartyHeaderComponent {
   partyName: string = "Name";
   currentHP: number = 0;
   maxHp: number = 5;
-  powerPoints: number = 40;
+  currentPP: number = 0;
+
+  constructor(private state: StateService) {
+    effect(() => {
+      this.maxHp = this.state.hP();
+      this.currentHP = this.maxHp;
+      this.currentPP = this.state.pP();
+    });
+  }
 
   updateHp(number: number) {
     const newValue = this.currentHP + number

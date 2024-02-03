@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {StatsComponent} from "../stats/stats.component";
 import {FormsModule} from "@angular/forms";
 import {NgIf} from "@angular/common";
-import {PartyHeaderComponent} from "./party-header/party-header.component";
+import {PartyHeaderComponent} from "../party-header/party-header.component";
 import {CharactersSectionComponent} from "../characters-section/characters-section.component";
 
 @Component({

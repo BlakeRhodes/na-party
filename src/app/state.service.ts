@@ -14,8 +14,12 @@ export class StateService {
     createCharacter(Type.SCOUT),
   ]);
 
+  hP = computed(()=>{
+    return this.characters()
+      .map((character) => character.hp)
+      .reduce((acc, curr) => acc + curr)
+  });
   cM = computed(()=>{
-    console.log("WTF")
     return this.characters()
       .map((character) => character.cm)
       .reduce((acc, curr) => acc + curr)
@@ -41,5 +45,21 @@ export class StateService {
       .reduce((acc, curr) => acc + curr)
   });
 
+  pP = computed(()=>{
+    let fromCharacter = this.characters()
+      .map((character) => character.pp)
+      .reduce((acc, curr) => acc + curr)
+    let extraCharacters = (this.characters().length - 4) * 5
+    return fromCharacter + extraCharacters;
+  });
 
+  updateCharacter(character: Character) {
+    console.log(this.characters())
+    const updated: Character[] = [];
+    this.characters().forEach(value => updated.push(value))
+    const index = updated.findIndex(entry => entry.id === character.id)
+    updated[index]=character
+    this.characters.set(updated)
+    console.log(this.characters())
+  }
 }

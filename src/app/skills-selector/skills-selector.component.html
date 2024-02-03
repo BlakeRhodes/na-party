@@ -1,23 +1,43 @@
 <!-- character-view.component.html -->
-<div class="m-2" [ngSwitch]="type">
+<div class="m-2" [ngSwitch]="character.type">
   <ng-container *ngSwitchCase="FIGHTER">
     <!-- Code to display when character type is Fighter -->
-    <p>This is a Fighter</p>
+    <ul>
+      <li *ngFor="let skill of fighterSkillNames; let i = index">
+        <input type="checkbox" [(ngModel)]="fighterChosen[i]" (change)="updateFighter(skill, i, $event)">
+        <label>{{skill}}</label>
+      </li>
+    </ul>
   </ng-container>
 
   <ng-container *ngSwitchCase="HUNTER">
     <!-- Code to display when character type is Hunter -->
-    <p>This is a Hunter</p>
+    <ul>
+      <li *ngFor="let skill of hunterSkillNames; let i = index">
+        <input type="checkbox" [(ngModel)]="hunterChosen[i]" (change)="updateHunter(skill, i, $event)">
+        <label>{{skill}}</label>
+      </li>
+    </ul>
   </ng-container>
 
   <ng-container *ngSwitchCase="PRIEST">
     <!-- Code to display when character type is Priest -->
-    <p>This is a Priest</p>
+    <ul>
+      <li *ngFor="let skill of priestSkillNames; let i = index">
+        <input type="checkbox" [(ngModel)]="priestChosen[i]" (change)="updatePriest(skill, i, $event)">
+        <label>{{skill}}</label>
+      </li>
+    </ul>
   </ng-container>
 
   <ng-container *ngSwitchCase="SCOUT">
     <!-- Code to display when character type is Scout -->
-    <p>This is a Scout</p>
+    <ul>
+      <li *ngFor="let skill of scoutSkillNames; let i = index">
+        <input type="checkbox" [(ngModel)]="scoutChosen[i]" (change)="updateScout(skill, i, $event)">
+        <label>{{skill}}</label>
+      </li>
+    </ul>
   </ng-container>
 
   <ng-container *ngSwitchDefault>
