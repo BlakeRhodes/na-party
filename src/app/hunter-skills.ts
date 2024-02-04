@@ -39,37 +39,37 @@ export function removeKillerTwo(character:Character): Character {
 }
 
 export function applyResourcefulOne(character: Character): Character {
-  character.cm += 1;
+  character.rp += 1;
   character.pp +=2;
   return character;
 }
 
 export function removeResourcefulOne(character: Character): Character {
-  character.cm -= 1;
+  character.rp -= 1;
   character.pp -=2;
   return character;
 }
 
 export function applyResourcefulTwo(character: Character): Character {
-  character.cm += 2;
+  character.rp += 2;
   character.pp += 4;
   return character;
 }
 
 export function removeResourcefulTwo(character: Character): Character {
-  character.cm -= 2;
+  character.rp -= 2;
   character.pp -=4;
   return character;
 }
 
 export function applyResourcefulThree(character: Character): Character {
-  character.cm += 3;
+  character.rp += 3;
   character.pp +=6;
   return character;
 }
 
 export function removeResourcefulThree(character: Character): Character {
-  character.cm -= 3;
+  character.rp -= 3;
   character.pp -=6;
   return character;
 }
