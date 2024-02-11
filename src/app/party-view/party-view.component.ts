@@ -5,6 +5,7 @@ import {NgIf} from "@angular/common";
 import {PartyHeaderComponent} from "../party-header/party-header.component";
 import {CharactersSectionComponent} from "../characters-section/characters-section.component";
 import {InventoryComponent} from "../inventory/inventory.component";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-party-view',
@@ -15,7 +16,8 @@ import {InventoryComponent} from "../inventory/inventory.component";
     NgIf,
     PartyHeaderComponent,
     CharactersSectionComponent,
-    InventoryComponent
+    InventoryComponent,
+    FooterComponent
   ],
   templateUrl: './party-view.component.html',
   styleUrl: './party-view.component.css'

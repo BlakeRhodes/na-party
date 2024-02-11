@@ -16,7 +16,6 @@ export class InventoryComponent {
   inventory = computed(() => this.state.inventory().entries());
   constructor(protected state: StateService) {
     effect(() => {
-      console.log(this.state.inventory().entries())
     });
   }
 
@@ -26,7 +25,7 @@ export class InventoryComponent {
       const newMap = this.state.inventory()
       newMap.set(item[0], newAmount);
       this.state.inventory.set(newMap);
-      console.log(this.state.inventory())
+      localStorage.setItem("inventory", JSON.stringify(Array.from(newMap)))
     }
   }
 }

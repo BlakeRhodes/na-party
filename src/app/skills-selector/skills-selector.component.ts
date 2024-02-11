@@ -66,7 +66,6 @@ export class SkillsSelectorComponent {
   }
 
   updateFighter(skill: string, i: number, $event: any) {
-    console.log(skill, this.fighterChosen[i], $event, this.character)
     const skillPair = this.fighterSkills.get(skill);
     if (skillPair) {
       if(this.fighterChosen[i]){
@@ -79,7 +78,6 @@ export class SkillsSelectorComponent {
   }
 
   updateHunter(skill: string, i: number, $event: any) {
-    console.log(skill, this.hunterChosen[i], $event, this.character)
     const skillPair = this.hunterSkills.get(skill);
     if (skillPair) {
       if(this.hunterChosen[i]){
@@ -92,7 +90,6 @@ export class SkillsSelectorComponent {
   }
 
   updatePriest(skill: string, i: number, $event: any) {
-    console.log(skill, this.priestChosen[i], $event, this.character)
     const skillPair = this.priestSkills.get(skill);
     if (skillPair) {
       if(this.priestChosen[i]){
@@ -106,7 +103,6 @@ export class SkillsSelectorComponent {
 
 
   updateScout(skill: string, i: number, $event: any) {
-    console.log(skill, this.scoutChosen[i], $event, this.character)
     const skillPair = this.scoutSkills.get(skill);
     if (skillPair) {
       if(this.scoutChosen[i]){
