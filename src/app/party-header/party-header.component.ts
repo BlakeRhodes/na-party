@@ -16,22 +16,35 @@ import {StateService} from "../state.service";
 export class PartyHeaderComponent {
 
   isEditMode: boolean = false;
-  partyName: string = "Name";
+  partyName: string = "";
   currentHP: number = 0;
   maxHp: number = 5;
   currentPP: number = 0;
+  maxRations: number = 6
+  currentRations: number = 0;
 
   constructor(private state: StateService) {
     effect(() => {
+      this.partyName = this.state.name()
       this.maxHp = this.state.hP();
-      this.currentHP = this.maxHp;
+      this.currentHP = this.state.currentHp();
       this.currentPP = this.state.pP();
+      this.currentRations = this.state.rations()
     });
   }
 
   updateHp(number: number) {
-    const newValue = this.currentHP + number
+    const newValue = this.currentHP + number;
     if(newValue <= this.maxHp && newValue >=0)
-      this.currentHP = newValue
+      this.state.currentHp.set(newValue)
+  }
+  updateRations(number: number){
+    const newValue = this.currentRations + number;
+    if(newValue <= this.maxRations && newValue >= 0)
+      this.state.rations.set(newValue);
+  }
+
+  updateName() {
+    this.state.name.set(this.partyName);
   }
 }

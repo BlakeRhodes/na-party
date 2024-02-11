@@ -4,6 +4,7 @@ import {FormsModule} from "@angular/forms";
 import {NgIf} from "@angular/common";
 import {PartyHeaderComponent} from "../party-header/party-header.component";
 import {CharactersSectionComponent} from "../characters-section/characters-section.component";
+import {InventoryComponent} from "../inventory/inventory.component";
 
 @Component({
   selector: 'app-party-view',
@@ -13,7 +14,8 @@ import {CharactersSectionComponent} from "../characters-section/characters-secti
     FormsModule,
     NgIf,
     PartyHeaderComponent,
-    CharactersSectionComponent
+    CharactersSectionComponent,
+    InventoryComponent
   ],
   templateUrl: './party-view.component.html',
   styleUrl: './party-view.component.css'

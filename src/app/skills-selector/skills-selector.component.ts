@@ -1,12 +1,12 @@
 import {Component, Input} from '@angular/core';
 import {Character, createCharacter, Type} from "../character";
 import {NgForOf, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common";
-import {fighterSkills} from "../fighter-skills";
+import {fighterSkillDescriptions, fighterSkills} from "../fighter-skills";
 import {FormsModule} from "@angular/forms";
 import {StateService} from "../state.service";
-import {hunterSkills} from "../hunter-skills";
-import {priestSkills} from "../priest-skills";
-import {scoutSkills} from "../scout-skills";
+import {hunterSkillDescriptions, hunterSkills} from "../hunter-skills";
+import {priestSkillDescriptions, priestSkills} from "../priest-skills";
+import {scoutSkillDescriptions, scoutSkills} from "../scout-skills";
 
 @Component({
   selector: 'app-skills-selector',
@@ -117,4 +117,9 @@ export class SkillsSelectorComponent {
       this.state.updateCharacter(this.character)
     }
   }
+
+  protected readonly fighterSkillDescriptions = fighterSkillDescriptions;
+  protected readonly hunterSkillDescriptions = hunterSkillDescriptions;
+  protected readonly priestSkillDescriptions = priestSkillDescriptions;
+  protected readonly scoutSkillDescriptions = scoutSkillDescriptions;
 }

@@ -88,3 +88,18 @@ export const hunterSkills: Map<string, Pair<(arg: Character)=>Character, (arg: C
   ["Resourceful [2]",{first:applyResourcefulTwo, second:removeResourcefulTwo}],
   ["Resourceful [3]",{first:applyResourcefulThree, second:removeResourcefulThree}],
 ])
+
+export const hunterSkillDescriptions = new Map([
+  ["Survival [1]", "You can spend 1 R to add +1 to Foraging Rolls, this may be done after the roll is made."],
+  ["Survival [2]", "You can spend 1 R to add +2 to Foraging Rolls, this may be done after the roll is made."],
+  ["Survival [3]", "You can spend 1 R to add +3 to Foraging Rolls, this may be done after the roll is made."],
+  ["Harvest the Land", "When your degree of success is 2+  on a Forage Roll gain one ration, max 6"],
+  ["Don't Ask", "If the party has ran out of rations you may spend 2 RP to gain a ration."],
+  ["Rain or Shine", "Spend 1 RP during Planning phase to ignore weather effects this turn."],
+  ["Gatherer", "Spend 2 RP when making a loot role, then add one to the result. This may only be done before making the roll."],
+  ["Killer [1]", "Increase your Combat Modifier by 1"],
+  ["Killer [2]", "Increase your Combat Modifier by 2"],
+  ["Resourceful [1]", "Increase Resourcefulness by 1"],
+  ["Resourceful [2]", "Increase Resourcefulness by 2"],
+  ["Resourceful [3]", "Increase Resourcefulness by 3"],
+]);

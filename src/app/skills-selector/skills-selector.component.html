@@ -1,12 +1,19 @@
-<button class="m-1" (click)="isExpanded = !isExpanded">{{isExpanded ? 'Hide' : 'Show'}}</button>
+<button class="m-1" (click)="isExpanded = !isExpanded">{{ isExpanded ? 'Hide' : 'Show' }}</button>
 
 <div class="m-2" *ngIf="isExpanded" [ngSwitch]="character.type">
   <ng-container *ngSwitchCase="FIGHTER">
     <!-- Code to display when character type is Fighter -->
     <ul>
-      <li *ngFor="let skill of fighterSkillNames; let i = index">
-        <input type="checkbox" [(ngModel)]="fighterChosen[i]" (change)="updateFighter(skill, i, $event)">
-        <label>{{skill}}</label>
+      <li
+        *ngFor="let skill of fighterSkillNames; let i = index"
+        [title]="fighterSkillDescriptions.get(skill)"
+      >
+        <input
+          type="checkbox"
+          [(ngModel)]="fighterChosen[i]"
+          (change)="updateFighter(skill, i, $event)"
+        >
+        <label>{{ skill }}</label>
       </li>
     </ul>
   </ng-container>
@@ -14,9 +21,11 @@
   <ng-container *ngSwitchCase="HUNTER">
     <!-- Code to display when character type is Hunter -->
     <ul>
-      <li *ngFor="let skill of hunterSkillNames; let i = index">
+      <li *ngFor="let skill of hunterSkillNames; let i = index"
+          [title]="hunterSkillDescriptions.get(skill)"
+      >
         <input type="checkbox" [(ngModel)]="hunterChosen[i]" (change)="updateHunter(skill, i, $event)">
-        <label>{{skill}}</label>
+        <label>{{ skill }}</label>
       </li>
     </ul>
   </ng-container>
@@ -24,9 +33,11 @@
   <ng-container *ngSwitchCase="PRIEST">
     <!-- Code to display when character type is Priest -->
     <ul>
-      <li *ngFor="let skill of priestSkillNames; let i = index">
+      <li *ngFor="let skill of priestSkillNames; let i = index"
+          [title]="priestSkillDescriptions.get(skill)"
+      >
         <input type="checkbox" [(ngModel)]="priestChosen[i]" (change)="updatePriest(skill, i, $event)">
-        <label>{{skill}}</label>
+        <label>{{ skill }}</label>
       </li>
     </ul>
   </ng-container>
@@ -34,9 +45,11 @@
   <ng-container *ngSwitchCase="SCOUT">
     <!-- Code to display when character type is Scout -->
     <ul>
-      <li *ngFor="let skill of scoutSkillNames; let i = index">
+      <li *ngFor="let skill of scoutSkillNames; let i = index"
+          [title]="scoutSkillDescriptions.get(skill)"
+      >
         <input type="checkbox" [(ngModel)]="scoutChosen[i]" (change)="updateScout(skill, i, $event)">
-        <label>{{skill}}</label>
+        <label>{{ skill }}</label>
       </li>
     </ul>
   </ng-container>
