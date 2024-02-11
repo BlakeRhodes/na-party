@@ -46,8 +46,10 @@ export class CharactersSectionComponent {
         default:
           return;
       }
-      this.charactersArray.push(createCharacter(type))
-      this.state.characters.set(this.charactersArray)
+      const newCharacter = createCharacter(type);
+      this.charactersArray.push(newCharacter);
+      this.state.characters.set(this.charactersArray);
+      this.state.resetStats();
     }
   }
 }

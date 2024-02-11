@@ -16,40 +16,56 @@
           {{ currentCM }}
         </td>
         <td class="py-3 px-6 text-center">
-          <button class="bg-blue-500 text-sm hover:bg-blue-700 text-white font-bold mr-1 px-1 align-middle rounded"
-                  (click)="updateStat('SP', -1)"
-          >-</button>
-          {{ currentSP }}
-          <button class="bg-blue-500 text-sm hover:bg-blue-700 text-white font-bold mr-1 px-1 align-middle rounded"
-                  (click)="updateStat('SP', 1)"
-          >+</button>
+          <div class="flex flex-col-reverse">
+            <button class="bg-blue-500 text-sm hover:bg-blue-700 text-white font-bold mr-1 px-1 align-middle rounded"
+                    (click)="updateStat('SP', -1)"
+            >-
+            </button>
+            {{ currentSP }}
+            <button class="bg-blue-500 text-sm hover:bg-blue-700 text-white font-bold mr-1 px-1 align-middle rounded"
+                    (click)="updateStat('SP', 1)"
+            >+
+            </button>
+          </div>
         </td>
         <td class="py-3 px-6 text-center">
+          <div class="flex flex-col-reverse">
           <button class="bg-blue-500 text-sm hover:bg-blue-700 text-white font-bold mr-1 px-1 align-middle rounded"
                   (click)="updateStat('WP', -1)"
-          >-</button>
+          >-
+          </button>
           {{ currentWP }}
           <button class="bg-blue-500 text-sm hover:bg-blue-700 text-white font-bold mr-1 px-1 align-middle rounded"
                   (click)="updateStat('WP', 1)"
-          >+</button>
+          >+
+          </button>
+          </div>
         </td>
         <td class="py-3 px-6 text-center">
+          <div class="flex flex-col-reverse">
           <button class="bg-blue-500 text-sm hover:bg-blue-700 text-white font-bold mr-1 px-1 align-middle rounded"
                   (click)="updateStat('LP', -1)"
-          >-</button>
+          >-
+          </button>
           {{ currentLP }}
           <button class="bg-blue-500 text-sm hover:bg-blue-700 text-white font-bold mr-1 px-1 align-middle rounded"
                   (click)="updateStat('LP', 1)"
-          >+</button>
+          >+
+          </button>
+          </div>
         </td>
         <td class="py-3 px-6 text-center">
+          <div class="flex flex-col-reverse">
           <button class="bg-blue-500 text-sm hover:bg-blue-700 text-white font-bold mr-1 px-1 align-middle rounded"
                   (click)="updateStat('RP', -1)"
-          >-</button>
+          >-
+          </button>
           {{ currentRP }}
           <button class="bg-blue-500 text-sm hover:bg-blue-700 text-white font-bold mr-1 px-1 align-middle rounded"
                   (click)="updateStat('RP', 1)"
-          >+</button>
+          >+
+          </button>
+          </div>
         </td>
       </tr>
       </tbody>

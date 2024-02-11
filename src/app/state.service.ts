@@ -100,4 +100,12 @@ export class StateService {
     updated[index] = character
     this.characters.set(updated)
   }
+
+  resetStats() {
+    this.currentSp.set(this.sP());
+    this.currentLp.set(this.lP());
+    this.currentHp.set(this.hP());
+    this.currentWp.set(this.wP());
+    this.currentRp.set(this.rP());
+  }
 }
